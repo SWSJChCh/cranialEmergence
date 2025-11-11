@@ -42,9 +42,6 @@ pip install requirements.txt
 `VEGF.py` contains a forward-Euler solver used to update the chemoattractant profiles within the growing 
 simulation domain. 
 
-#### collisionCell.py 
-`collisionCell.py` includes functions for cellular collision detection and the detection of cells with filopodia. 
-
 #### growthFunction.py 
 `growthFunction.py` includes functions that fit _in vivo_ data of the domain length to a logistic curve, and returns
 a time-resolved list of domain lengths for use in the main simulation. 
