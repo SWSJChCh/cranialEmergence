@@ -4,7 +4,7 @@
 This repository contains Python scripts used to generate data for plots in the publication:
 _The spontaneous emergence of leaders and followers in an agent-based model of cranial neural crest cell migration_
 
-### Code Authors
+### Code Author
 - Samuel Johnson
 
 ### Date
