@@ -9,7 +9,7 @@ import math
 import random
 
 # ---------- Polarisation ----------
-epsGrad  = 1e-9      # Safety parameter for gradient sensing     (Numerical safety parameter)
+epsGrad  = 1e-2      # Safety parameter for gradient sensing     (Numerical safety parameter)
 tauSense = 0.25      # Memory time scale in time units           (~15 minutes of signal integration)
 kChemo   = 3.0       # Angular relaxation rate per unit time     (~15 minutes for cell alignment)
 gSat     = 0.5       # Cue saturation                            (~2× the detection threshold for saturation)
