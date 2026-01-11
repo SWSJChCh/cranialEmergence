@@ -82,7 +82,7 @@ def summation(VEGFArray, cellList, lmbd, R, searchRad, L, meshScale):
     rowDiff = rows - cellPositions[:, 0][:, np.newaxis, np.newaxis]
     colDiff = cols - cellPositions[:, 1][:, np.newaxis, np.newaxis]
     summFinArray = np.exp(-(((rowDiff * meshScale)**2) + ((L / meshL)**2 * \
-        colDiff**2)) / (3 * R**2))
+        colDiff**2)) / (2 * R**2))
     #Sum contributions from each cell
     summFinArray = np.sum(summFinArray, axis=0)
     #Multiply the final array by concentration and internalisation rate
