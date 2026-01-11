@@ -8,13 +8,13 @@ import numpy as np
 import math
 import random
 
-# ---------- Polarisation ----------
+# Polarisation 
 epsGrad  = 1e-2      # Safety parameter for gradient sensing     (Numerical safety parameter)
 tauSense = 0.1       # Memory time scale in time units           (~6 minutes of signal integration)
 kChemo   = 10.0      # Angular relaxation rate per unit time     (~6 minutes for cell alignment)
 gSat     = 0.5       # Cue saturation                            (~2× the detection threshold for saturation)
 
-# ----- Mass–spring parameters -----
+# Mass–spring parameters 
 substeps = 10000     # Euler substeps per unit time              (Numerical safety parameter)
 rCore    = 2.0       # Min spacing multiplier of cellRad         (Equilibrium cell separation)
 kRep     = 1e3       # Short-range repulsion                     (High short-ranged repulsion) 
@@ -22,7 +22,7 @@ kRep     = 1e3       # Short-range repulsion                     (High short-ran
 kSpring  = 1e3       # Spring stiffness                          (Spring-like attraction)    
 f0       = 1e3       # Active-force scale per cell               (Active force from chemotaxis)
 
-# -------------- Helper functions ------------
+# Helper functions 
 def wrapAngle(a):
     return (a + math.pi) % (2 * math.pi) - math.pi
 
@@ -82,7 +82,7 @@ def repositionTrailingCells(cellList, nMove, cellRad, domainLen,
         if clearBonds and hasattr(c, "bonds"):
             c.bonds.clear()
 
-# ---------- Bonds and springs ----------
+# Bonds and springs
 def ensureBonds(cellList, RLink, RBreak):
     live = set(cellList)
     for c in cellList:
@@ -174,7 +174,7 @@ def massSpringStep(kSpring, f0, cellList, dt, cellRad,
             i.y += Fy[i] * h + jittery
             projectToBox(i, cellRad, width, length)
 
-# ---------------- Main API ----------------
+# Main API 
 def moveCells(VEGFArray, cellList, filoNum, lenFilo,
               lenFiloMax, xi, c0, cellRad,
               oldLen, newLen, kSpring, f0, dt=1.0/60.0, posNoise=0.1):
