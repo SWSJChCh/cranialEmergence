@@ -64,4 +64,4 @@ python runSimulation.py spring-strength active-strength degradation-rate
 
 - **spring-strength** - Scaling parameter for inter-cellular attraction (float)
 - **active-strength** - Scaling parameter for active polarity-induced force (float)
-- **degradation-rate** - Degradation rate of VEGF (/h)
+- **degradation-rate** - Degradation rate of VEGF (μm^2/h)
