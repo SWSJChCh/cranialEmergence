@@ -93,7 +93,7 @@ insertStep = 1
 repeats = 1
 
 #VEGF parameters
-D = 0.001                      #Diffusion constant
+D = 0.1                        #Diffusion constant
 subStep = 1                    #Solver steps per timestep
 dx = 1                         #Spacestep (x / μm)
 dy = 1                         #Spacestep (y / μm)
@@ -277,3 +277,4 @@ if not animate:
 #Delete folder used to make MP4
 else:
     os.rmdir('Emergence' + date)
+
